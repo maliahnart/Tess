@@ -1,0 +1,12 @@
+F:\Test\BTLC\bin\Debug\BTLC.exe.config
+F:\Test\BTLC\bin\Debug\BTLC.exe
+F:\Test\BTLC\bin\Debug\BTLC.pdb
+F:\Test\BTLC\obj\Debug\BTLC.csproj.AssemblyReference.cache
+F:\Test\BTLC\obj\Debug\BTLC.Properties.Resources.resources
+F:\Test\BTLC\obj\Debug\BTLC.csproj.GenerateResource.cache
+F:\Test\BTLC\obj\Debug\BTLC.csproj.CoreCompileInputs.cache
+F:\Test\BTLC\obj\Debug\BTLC.exe
+F:\Test\BTLC\obj\Debug\BTLC.pdb
+F:\Test\BTLC\bin\Debug\Guna.UI2.dll
+F:\Test\BTLC\obj\Debug\BTLC.csproj.Up2Date
+F:\Test\BTLC\obj\Debug\BTLC.DangNhap.resources
