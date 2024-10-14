@@ -10,7 +10,7 @@ namespace BTLC
 {
     public class ConnectDB
     {
-        string strConnect = @"Data Source=DESKTOP-S8N7JNH\SQLEXPRESS;Initial Catalog=BTL_6;Integrated Security=True;Trust Server Certificate=True";
+        string strConnect = @"Data Source=DESKTOP-S8N7JNH\SQLEXPRESS;Initial Catalog=BTL_6;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection sqlConnect = null;
         //Hàm mở kết nối CSDL
         private void KetNoiCSDL()
