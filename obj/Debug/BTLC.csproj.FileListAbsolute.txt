@@ -23,3 +23,4 @@ F:\Test\Tess\obj\Debug\BTLC.csproj.Up2Date
 F:\Test\Tess\obj\Debug\BTLC.exe
 F:\Test\Tess\obj\Debug\BTLC.pdb
 F:\Test\Tess\obj\Debug\BTLC.Main.resources
+F:\Test\Tess\obj\Debug\BTLC.HomePage.resources

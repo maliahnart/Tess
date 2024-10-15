@@ -81,6 +81,8 @@ namespace BTLC
                 txtPassword.PasswordChar = '•'; // Hide password
             }
         }
+
+
     }
 
 }
