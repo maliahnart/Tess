@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,8 +18,8 @@ namespace BTLC
         {
             InitializeComponent();
             conn = new ConnectDB();
+            
         }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string Uname = txtUser.Text;
@@ -35,16 +36,18 @@ namespace BTLC
             }
             else
             {
-                // Gọi hàm VerifyUser để kiểm tra thông tin đăng nhập
-                if (VerifyUser(Uname,pass))
+                // Gọi hàm VerifyUser để kiểm tra thông tin đăng nhập và lấy mã nhân viên
+                string maNV = VerifyUser(Uname, pass);
+                if (maNV != null)
                 {
                     // Thông báo đăng nhập thành công
-                    MessageBox.Show("Log in successfully!", "Announce", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    guna2MessageDialogSuccess.Show();
 
-                    // Chuyển sang trang HomePage
+                    // Chuyển sang trang UserDetails và truyền mã nhân viên
                     this.Hide();
-                    Main frm = new Main();
-                    frm.Show();
+                    HomePage homePage = new HomePage(maNV); // Chuyển mã nhân viên vào HomePage
+                    homePage.Show();
+
                 }
                 else
                 {
@@ -54,12 +57,21 @@ namespace BTLC
             }
         }
 
-        public bool VerifyUser(string username, string password)
+
+
+        public string VerifyUser(string username, string password)
         {
-            string query = $"SELECT * FROM TaiKhoan WHERE TenDangNhap = '{username}' AND MatKhau = '{password}'";
+            string query = $"SELECT MaNV FROM TaiKhoan WHERE TenDangNhap = '{username}' AND MatKhau = '{password}'";
             DataTable result = conn.DocBang(query);
-            return result.Rows.Count > 0;
+
+            if (result.Rows.Count > 0)
+            {
+                return result.Rows[0]["MaNV"].ToString(); // Lấy mã nhân viên
+            }
+
+            return null; // Trả về null nếu không tìm thấy
         }
+
 
         private void DangNhap_Load(object sender, EventArgs e)
         {

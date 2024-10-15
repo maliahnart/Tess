@@ -38,6 +38,7 @@
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.opShow = new System.Windows.Forms.PictureBox();
+            this.guna2MessageDialogSuccess = new Guna.UI2.WinForms.Guna2MessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opShow)).BeginInit();
             this.SuspendLayout();
@@ -178,6 +179,15 @@
             this.opShow.TabStop = false;
             this.opShow.Click += new System.EventHandler(this.opShow_Click);
             // 
+            // guna2MessageDialogSuccess
+            // 
+            this.guna2MessageDialogSuccess.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.guna2MessageDialogSuccess.Caption = "Announce";
+            this.guna2MessageDialogSuccess.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            this.guna2MessageDialogSuccess.Parent = null;
+            this.guna2MessageDialogSuccess.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.guna2MessageDialogSuccess.Text = "Log in successfully!";
+            // 
             // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -214,5 +224,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnLogin;
         private System.Windows.Forms.PictureBox opShow;
+        public Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialogSuccess;
     }
 }

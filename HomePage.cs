@@ -12,11 +12,13 @@ namespace BTLC
 {
     public partial class HomePage : Form
     {
+        private string maNV;
         private ConnectDB conn;
-        public HomePage()
+        public HomePage(string maNV)
         {
             InitializeComponent();
             conn = new ConnectDB();
+            this.maNV = maNV;
         }
 
         private void HomePage_Load(object sender, EventArgs e)
@@ -115,9 +117,21 @@ namespace BTLC
             {
                 lblGG.Text = $"Giảm giá: {totalResult1.Rows[0]["Bang3"]}";
             }
+            
         }
 
+        private void picdetail_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UserDetails userDetailsForm = new UserDetails(maNV); 
+            userDetailsForm.Show();
+        }
 
-
+        private void btnSanPham_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ProductList productList = new ProductList(maNV);
+            productList.ShowDialog();
+        }
     }
 }
